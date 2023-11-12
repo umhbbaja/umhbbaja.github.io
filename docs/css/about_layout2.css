@@ -13,14 +13,17 @@ html {
 }
 
 .teams {
-    display: flex;
-    justify-content: space-between;
+    display: flex;    
     align-items: center;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 .team {
+    width: 22%;
+    margin: 0 auto; /* Adjust the margin as needed */
     text-align: center;
-    margin: 10px;
+    position: relative;
 }
 
 .team img {
@@ -94,15 +97,6 @@ html {
     color: rgb(254, 195, 36);            
 }
 
-.dropdown:not(.no-border) {
-    position: relative;
-    display: inline-block;
-}
-
-.no-border {
-    border: none;
-}
-
 .form-container {
     text-align: center;
 }
@@ -124,13 +118,23 @@ img, object, embed, video {
 body {
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
-    padding-left: 4.55%;
-    padding-right: 4.55%;
+    width: 85%;
     clear: none;
     float: none;
     min-height: 100%;
-    
+    overflow-y: scroll;    
+}
+
+body::-webkit-scrollbar {
+    width: 18px; /* Adjust the width as needed */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(73, 47, 146,.3); /* Customize the thumb color */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgba(254, 195, 36, .5); /* Customize the track color */
 }
 
 article {
@@ -218,7 +222,7 @@ nav ul li a {
     margin-bottom: 8%;    
 }
 
-
+    
 
 nav ul li a:hover {    
     color: rgb(254, 195, 36);
@@ -369,9 +373,6 @@ html, body {
 }
 
 body {
-   width: 89.9%;
-   padding-left: 1.55%;
-   padding-right: 1.55%;
    clear: none;
    float: none;
    margin-left: auto;
@@ -475,10 +476,7 @@ html {
 
 body {
    margin-left: 3%;
-   margin-right: 3%;    
-   width: 90%;   
-   padding-left: 0.9%;
-   padding-right: 0.9%;
+   margin-right: 3%;        
    margin: 0px auto auto auto;
    clear: none;
    float: none;
