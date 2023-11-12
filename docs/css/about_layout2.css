@@ -218,9 +218,7 @@ nav ul li a {
     margin-bottom: 8%;    
 }
 
-nav ul li a:visited {
-    color: rgb(195, 36, 254);
-}
+
 
 nav ul li a:hover {    
     color: rgb(254, 195, 36);
