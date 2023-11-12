@@ -489,3 +489,81 @@ body {
 }
 }
 }
+
+/* =============================================
+	Mobile layout styles used by devices
+	480px and smaller in landscape mode.
+   =============================================
+*/
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+
+
+
+.teams {
+    display: flex; /* Display teams in a row in portrait mode */
+    justify-content: space-around; /* Space teams evenly in portrait mode */
+    align-items: flex-start; /* Align items to the start of the container */
+    flex-wrap: wrap; /* Allow teams to wrap onto multiple lines */
+}
+
+
+.team {
+    width: 22%; /* Adjust the width as needed for spacing between teams */
+    margin: 1%; /* Add a small margin between teams */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.team img {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+}
+
+.team .caption {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    font-size: 10px;
+}
+
+header {
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    header a img {
+        max-width: 80%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        width: 100%;
+        margin: 0;
+        border-top: none;
+        border-bottom: 3px solid rgb(254, 195, 36);
+        display: flex; /* Add this line */
+        justify-content: space-between; /* Add this line */
+        align-items: center; /* Add this line */
+    }
+
+    nav ul {
+        display: flex; /* Add this line */
+        flex-direction: row; /* Add this line */
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 10px 0;
+        font-size: 9px; /* Adjust the font size as needed */
+    }
+
+    .dropdown-menu {
+        width: 100%;
+    }
+}
