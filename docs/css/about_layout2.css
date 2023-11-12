@@ -15,8 +15,16 @@ html {
 .teams {
     display: flex;    
     align-items: center;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-top: 5px;
+    border-bottom: 5px;
+    border-color: rgb(73, 47, 146);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 150px;  /* Adjust the left padding to create space */
+    padding-right: 150px; /* Adjust the right padding to create space */
+    background-color: rgb(254,195,36);
 }
 
 .team {
