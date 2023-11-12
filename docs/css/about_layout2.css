@@ -419,6 +419,8 @@ nav {
    width: 96%;
    margin: 0 auto;
    float: none;
+   background: linear-gradient(to right, rgba(73, 47, 146, 0.6), rgba(73, 47, 146, 0), rgba(73, 47, 146, 0.8));
+   box-shadow: rgba(121, 121, 121, 0.9) 0px 10px 15px, rgba(121, 121, 121, 0.9) 0px -10px 15px; /* Adjusted shadow */
 }
 
 nav ul {
@@ -498,6 +500,16 @@ body {
 
 @media only screen and (max-width: 480px) and (orientation: portrait) {
 
+.body {
+        width: 90%;
+            -moz-box-shadow: rgba(121, 121, 121, 0.9) 20px 0px 25px, rgba(121, 121, 121, 0.9) -20px 0px 25px; /*side glow left right*/
+   -webkit-box-shadow: rgba(121, 121, 121, 0.9) 20px 0px 25px, rgba(121, 121, 121, 0.9) -20px 0px 25px;
+   box-shadow: rgba(121, 121, 121, 0.9) 20px 0px 25px, rgba(121, 121, 121, 0.9) -20px 0px 25px; 
+}
+
+.img {
+    max-width: 80%;
+}
 
 
 .teams {
@@ -530,40 +542,46 @@ body {
 }
 
 header {
-        text-align: center;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    header a img {
-        max-width: 80%;
-        height: auto;
-        margin-bottom: 10px;
-    }
-
-    nav {
-        width: 100%;
-        margin: 0;
-        border-top: none;
-        border-bottom: 3px solid rgb(254, 195, 36);
-        display: flex; /* Add this line */
-        justify-content: space-between; /* Add this line */
-        align-items: center; /* Add this line */
-    }
-
-    nav ul {
-        display: flex; /* Add this line */
-        flex-direction: row; /* Add this line */
-        margin: 0;
-    }
-
-    nav ul li {
-        margin: 0;
-        padding: 10px 0;
-        font-size: 9px; /* Adjust the font size as needed */
-    }
-
-    .dropdown-menu {
-        width: 100%;
-    }
+    text-align: center;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+header a img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+nav {
+    width: 100%;
+    margin: 0;
+    border-top: none;
+    border-bottom: 3px solid rgb(254, 195, 36);
+    border-top: 3px solid rgb(254, 195, 36); /* Add this line */        
+    display: flex; /* Add this line */
+    justify-content: space-between; /* Add this line */
+    align-items: center; /* Add this line */
+    background: linear-gradient(to right, rgba(73, 47, 146, 0.5), rgba(73, 47, 146, 0), rgba(73, 47, 146, 0.5));
+    box-shadow: rgba(121, 121, 121, 0.9) 0px 10px 15px, rgba(121, 121, 121, 0.9) 0px -10px 15px; /* Adjusted shadow */
+}
+    
+nav ul {
+    display: flex; /* Add this line */
+    flex-direction: row; /* Add this line */
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+    font-size: 8px; /* Adjust the font size as needed */
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+}
+
+    
+

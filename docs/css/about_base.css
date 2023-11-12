@@ -263,3 +263,10 @@ table {
 td, th {
    vertical-align: top;
 }
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+
+.body {
+        width: 98%
+}
+}
