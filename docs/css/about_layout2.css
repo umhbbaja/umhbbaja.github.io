@@ -12,16 +12,31 @@ html {
     font-size: 14px;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Adjust the gap between items */
+}
+
+.grid-item {
+  border: 4px solid rgb(73,47,146); /* Border around each box */
+  padding: 15px; /* Add padding to create space within each box */
+  background-color: rgb(254, 195, 36);
+}
+
+.grid-item h3 {
+    text-align: center;
+}
+
 .teams {
     display: flex;    
-    align-items: center;
+    
     margin-left: 1px;
     margin-right: 1px;
-    border-top: 5px;
-    border-bottom: 5px;
-    border-color: rgb(73, 47, 146);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    border-top: solid 2px rgb(73, 47, 146);
+    border-bottom: solid 2px rgb(73, 47, 146);    
+    padding-top: 30px;
+    padding-bottom: 30px;
     padding-left: 150px;  /* Adjust the left padding to create space */
     padding-right: 150px; /* Adjust the right padding to create space */
     background-color: rgb(254,195,36);
@@ -35,7 +50,7 @@ html {
 }
 
 .team img {
-    border-radius: 50%;
+    border-radius: 50%;    
     width: 175px;
     height: 175px;
 }
@@ -535,7 +550,7 @@ body {
 .team img {
     border-radius: 50%;
     width: 100%;
-    height: auto;
+    height: auto;   
 }
 
 .team .caption {
