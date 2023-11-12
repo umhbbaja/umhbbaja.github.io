@@ -29,5 +29,10 @@ document.addEventListener("DOMContentLoaded", function() {
     dropdown.addEventListener("mouseout", function() {
         dropdownMenu.style.width = "0"; // You can set a specific width here if needed
     });
+    
+    dropdown.addEventListener("click", function (event) {
+        event.preventDefault();
+        dropdown.classList.toggle("active");
+    });
 });
 
