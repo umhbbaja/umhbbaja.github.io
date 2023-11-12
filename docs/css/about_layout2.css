@@ -219,7 +219,7 @@ nav ul li a {
 }
 
 nav ul li a:visited {
-    color: #222;
+    color: rgb(195, 36, 254);
 }
 
 nav ul li a:hover {    
@@ -420,7 +420,7 @@ nav {
    margin: 0 auto;
    float: none;
    background: linear-gradient(to right, rgba(73, 47, 146, 0.6), rgba(73, 47, 146, 0), rgba(73, 47, 146, 0.8));
-   box-shadow: rgba(121, 121, 121, 0.9) 0px 10px 15px, rgba(121, 121, 121, 0.9) 0px -10px 15px; /* Adjusted shadow */
+   box-shadow: rgba(73,47,146, 0.3) 0px 10px 15px, rgba(254, 195, 36, 0.4) 0px -10px 15px; /* Adjusted shadow */
 }
 
 nav ul {
