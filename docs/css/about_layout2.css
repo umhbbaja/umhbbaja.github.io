@@ -19,9 +19,9 @@ html {
 }
 
 .grid-item {
-  border: 4px solid rgb(73,47,146); /* Border around each box */
+  border: 4px solid rgb(77,0,140); /* Border around each box */
   padding: 15px; /* Add padding to create space within each box */
-  background-color: rgb(254, 195, 36);
+  background-color: rgb(255, 202, 56);
 }
 
 .grid-item h3 {
@@ -33,13 +33,13 @@ html {
     
     margin-left: 1px;
     margin-right: 1px;
-    border-top: solid 2px rgb(73, 47, 146);
-    border-bottom: solid 2px rgb(73, 47, 146);    
+    border-top: solid 2px rgb(77,0,140);
+    border-bottom: solid 2px rgb(77,0,140);    
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 150px;  /* Adjust the left padding to create space */
     padding-right: 150px; /* Adjust the right padding to create space */
-    background-color: rgb(254,195,36);
+    background-color: rgb(255, 202, 56);
 }
 
 .team {
@@ -68,10 +68,10 @@ html {
     margin: 0 auto;
     width: fit-content;
     padding: 10px 20px;
-    background-color: rgb(254, 195, 36);
-    color: rgb(73, 47, 146);
+    background-color: rgb(255, 202, 56);
+    color: rgb(77,0,140);
     font-size: 20px;
-    border: 2px rgb(73, 47, 146);
+    border: 2px rgb(77,0,140);
     border-radius: 15px;
     text-decoration: none;
     text-transform: uppercase;
@@ -79,8 +79,8 @@ html {
 }
 
 .donate-button:hover {
-    background-color: rgb(73, 47, 146);
-    color: rgb(254, 195, 36);
+    background-color: rgb(77,0,140);
+    color: rgb(255, 202, 56);
 }
 
 .dropdown {
@@ -112,12 +112,12 @@ html {
 
 .dropdown-menu li:hover {
     background-color: #fff;
-    color: rgb(254, 195, 36);
+    color: rgb(255, 202, 56);
 }
 
 .dropdown-menu .sponsorship-dropdown li:hover {
     background-color: #fff;
-    color: rgb(254, 195, 36);            
+    color: rgb(255, 202, 56);            
 }
 
 .form-container {
@@ -197,8 +197,8 @@ nav {
     width: 25%;
     float: left;
     margin: 6% 2% 0% 0%;
-    border-top: 3px solid rgb(254, 195, 36);
-    border-bottom: 3px solid rgb(254, 195, 36);
+    border-top: 3px solid rgb(255, 202, 56);
+    border-bottom: 3px solid rgb(255, 202, 56);
     margin: 0;
 }
 
@@ -220,14 +220,14 @@ nav ul li,.dropdown-menu li {
 
 nav ul li .dropdown-menu li:hover {
     background-color: #fff;
-    color: rgb(254, 195, 36);
+    color: rgb(255, 202, 56);
 }
 
 nav ul li {
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
     font-size: 0.8em;
     position: relative;
-    color: rgb(73, 47, 146);
+    color: rgb(77,0,140);
     display: table-cell;    
     text-align: center;
     margin: 10px 0;
@@ -239,7 +239,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgb(73, 47, 146);
+    color: rgb(77,0,140);
     text-decoration: none;
     display: block;
     margin-bottom: 8%;    
@@ -248,7 +248,7 @@ nav ul li a {
     
 
 nav ul li a:hover {    
-    color: rgb(254, 195, 36);
+    color: rgb(255, 202, 56);
 }
 
 nav ul li a:focus {
@@ -493,7 +493,7 @@ html, body {
 }
 
 html {
-   background-color: rgb(73, 47, 146); /*UMHB purple background*/
+   background-color: rgb(77,0,140); /*UMHB purple background*/
    margin: 0px auto;
 }
 
@@ -519,13 +519,18 @@ body {
 
 @media only screen and (max-width: 480px) and (orientation: portrait) {
 
-.body {
-        width: 90%;
-            -moz-box-shadow: rgba(121, 121, 121, 0.9) 20px 0px 25px, rgba(121, 121, 121, 0.9) -20px 0px 25px; /*side glow left right*/
-   -webkit-box-shadow: rgba(121, 121, 121, 0.9) 20px 0px 25px, rgba(121, 121, 121, 0.9) -20px 0px 25px;
-   box-shadow: rgba(121, 121, 121, 0.9) 20px 0px 25px, rgba(121, 121, 121, 0.9) -20px 0px 25px; 
-}
+body {
+        width: 85%;
+        -moz-box-shadow: rgba(177, 156, 217, 0.5) 20px 0px 25px, rgba(177, 156, 217, 0.5) -20px 0px 25px;
+        -webkit-box-shadow: rgba(177, 156, 217, 0.5) 20px 0px 25px, rgba(177, 156, 217, 0.5) -20px 0px 25px;
+        box-shadow: rgba(177, 156, 217, 0.5) 20px 0px 25px, rgba(177, 156, 217, 0.5) -20px 0px 25px;
+        background-color: white;
+    }
 
+html {
+   background-color: rgb(77,0,140); /*UMHB purple background*/
+   margin: 0px auto;
+}
 .img {
     max-width: 80%;
 }
@@ -536,6 +541,8 @@ body {
     justify-content: space-around; /* Space teams evenly in portrait mode */
     align-items: flex-start; /* Align items to the start of the container */
     flex-wrap: wrap; /* Allow teams to wrap onto multiple lines */
+    padding-left: 0;
+    padding-right: 0;
 }
 
 
@@ -576,8 +583,8 @@ nav {
     width: 100%;
     margin: 0;
     border-top: none;
-    border-bottom: 3px solid rgb(254, 195, 36);
-    border-top: 3px solid rgb(254, 195, 36); /* Add this line */        
+    border-bottom: 3px solid rgb(255, 202, 56);
+    border-top: 3px solid rgb(255, 202, 56); /* Add this line */        
     display: flex; /* Add this line */
     justify-content: space-between; /* Add this line */
     align-items: center; /* Add this line */
