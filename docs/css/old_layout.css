@@ -517,11 +517,12 @@ body {
 @media only screen and (max-width: 480px) and (orientation: portrait) {
 
 body {
-        width: 85%;
-        -moz-box-shadow: rgba(177, 156, 217, 0.5) 20px 0px 25px, rgba(177, 156, 217, 0.5) -20px 0px 25px;
-        -webkit-box-shadow: rgba(177, 156, 217, 0.5) 20px 0px 25px, rgba(177, 156, 217, 0.5) -20px 0px 25px;
-        box-shadow: rgba(177, 156, 217, 0.5) 20px 0px 25px, rgba(177, 156, 217, 0.5) -20px 0px 25px;
-        background-color: white;
+   margin-left: 3%;
+   margin-right: 3%;        
+   margin: 0px auto auto auto;
+   clear: none;
+   float: none;
+   background-color: white;
     }
 
 html {
