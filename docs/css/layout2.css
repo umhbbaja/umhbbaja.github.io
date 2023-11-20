@@ -1,0 +1,622 @@
+@charset "utf-8";
+
+/* =============================================
+	Base layout styles used by mobile devices
+	up to 480px and cascaded to larger devices 
+	unless superceded by other styles.
+   =============================================
+*/
+
+:root {
+  --base-font-size: 14px;
+  --grid-gap: 20px;
+  --border-width: 4px;
+  --team-width: 22%;
+  --team-padding: 1%;
+  --team-margin: 0 auto;
+  --team-img-size: 175px;
+  --button-font-size: 20px;
+  --button-padding: 10px 20px;
+}
+
+
+html {
+    height: 100%;
+    font-size: 14px;    
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap);
+}
+
+.grid-item {
+  border: 4px solid rgb(77,0,140); /* Border around each box */
+  padding: 15px; /* Add padding to create space within each box */
+  background-color: rgb(255, 202, 56);
+}
+
+.grid-item h3 {
+    text-align: center;
+}
+
+.teams {
+    display: flex;        
+    margin-left: 1px;
+    margin-right: 1px;
+    border-top: solid 2px rgb(77,0,140);
+    border-bottom: solid 2px rgb(77,0,140);    
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 150px;  /* Adjust the left padding to create space */
+    padding-right: 150px; /* Adjust the right padding to create space */
+    background: linear-gradient(to right, rgba(255, 202, 56, 10), rgba(73, 47, 146, 0), rgba(73, 47, 146, 10));
+}
+
+.team {
+    width: 22%;
+    margin: 0 auto; /* Adjust the margin as needed */
+    text-align: center;
+    position: relative;
+}
+
+.team img {
+    border-radius: 50%;    
+    width: 175px;
+    height: 175px;
+}
+
+.caption {
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+    text-align: center;
+    font-style: italic;
+}
+
+.donate-button {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: rgb(255, 202, 56);
+    color: rgb(77,0,140);
+    font-size: 20px;
+    border: 2px rgb(77,0,140);
+    border-radius: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;    
+}
+
+.donate-button:hover {
+    background-color: rgb(77,0,140);
+    color: rgb(255, 202, 56);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border:none;
+    margin: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+    
+.dropdown-menu li {
+    padding: 5px;
+    margin: 0;
+    border: none;
+    display: block;
+    white-space: nowrap;
+}
+
+.dropdown-menu li:hover {
+    background-color: #fff;
+    color: rgb(255, 202, 56);
+}
+
+.dropdown-menu .sponsorship-dropdown li:hover {
+    background-color: #fff;
+    color: rgb(255, 202, 56);            
+}
+
+.form-container {
+    text-align: center;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="text"],
+.form-container textarea {
+    width: 40%;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+img, object, embed, video {
+    max-width: 100%;
+}
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    clear: none;
+    float: none;
+    min-height: 100%;
+    overflow-y: scroll;
+    background: linear-gradient(to right, rgba(255, 202, 56, 10), rgba(73, 47, 146, 60), rgba(73, 47, 146, 10));    
+}
+
+body::-webkit-scrollbar {
+    width: 18px; /* Adjust the width as needed */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(73, 47, 146,.3); /* Customize the thumb color */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgba(254, 195, 36, .5); /* Customize the track color */
+}
+
+article {
+    width: 80%;
+    margin: 0 auto;
+    float: left;
+    font-size: 0.8em;
+    text-align: justify;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header a{
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    max-width: 20%
+}
+
+header a img{
+    float: none;
+    margin: 0;
+    padding: 0;
+    display: block;     
+}
+
+header nav {
+    margin-top: 0px;
+}
+
+nav {
+    width: 25%;
+    float: left;
+    margin: 6% 2% 0% 0%;
+    border-top: 3px solid rgb(255, 202, 56);
+    border-bottom: 3px solid rgb(255, 202, 56);
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li,.dropdown-menu li {
+    padding: 5px;
+    margin: 5px;
+    border: none;
+}
+
+nav ul li .dropdown-menu li:hover {
+    background-color: #fff;
+    color: rgb(255, 202, 56);
+}
+
+nav ul li {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    font-size: 0.8em;
+    position: relative;
+    color: rgb(77,0,140);
+    display: table-cell;    
+    text-align: center;
+    margin: 10px 0;
+    padding: 0px;
+    white-space: nowrap;
+    border: none;
+    box-sizing: border-box;
+    
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8%;    
+}
+
+    
+
+nav ul li a:hover {    
+    color: rgb(255, 202, 56);
+}
+
+nav ul li a:focus {
+    outline: thin dotted;
+}
+
+nav ul li a:hover, nav ul li a:active {
+    outline: 0;
+}
+
+nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li .dropdown-menu li {
+    padding: 5px;
+    margin: 0; /* Adjust the margin */
+    border: none;
+    display: block;
+    white-space: nowrap;
+}
+
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+body h1 {
+    margin: 1%;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    font-size: 1.5em;
+}
+
+body article h1 {
+    font-size: 1.15em;
+}
+
+cite {
+    color: rgb(110, 110, 255);
+}
+
+body p, body address {
+    margin: 3.5% 1%;
+    font-size: 1em;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    font-style: normal;
+    height: 100%;
+}
+
+dl {
+    margin-left: 2%;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+
+dt {
+   display: block;
+   margin: 0;
+   text-indent: 0;
+   font-weight: bold;
+   border-bottom: 1px solid rgba(168, 168, 168,1.00);
+}
+
+dd {
+   display: block;
+   margin: 0 0 3% 3%;
+   text-indent: 0;
+}
+
+blockquote {
+   font-size: 1em;
+   width: 100%;
+   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+   margin: 0 0 4% 0;
+}
+
+footer {
+   text-align: center;
+   font-size: 0.6em;
+   margin-top: 4%;
+   border-top: 3px solid rgba(128,98,26,1.00);
+   font-family: Segoe,"Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+   clear: both;
+   padding-bottom: 20px;
+   background: linear-gradient(to right, rgba(255, 202, 56, 10), rgba(73, 47, 146, 0), rgba(73, 47, 146, 10));
+}
+
+blockquote p:last-of-type {
+   border-top: 1px solid rgba(128,98,26,1.00);
+   text-align: right;
+   font-size: 1em;
+}
+
+q {
+   quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+q:before {
+   content: open-quote;
+}
+
+q:after {
+   content: close-quote;
+}
+
+article p, article address {
+   font-family: "Times New Roman", Times, serif;
+}
+
+.social-links {
+    
+    transition: color 0.2s;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 30px;
+    
+}
+
+.social-links:hover {
+    color: #333333;
+} 
+
+/* =============================================
+	Tablet layout styles used by devices
+	481px to 768px and cascaded to larger 
+	devices.
+   =============================================
+*/
+
+/**********************
+@media only screen and (min-width: 481px) {
+
+html, body {
+   font-size: 16px;
+}
+
+body {
+   clear: none;
+   float: none;
+   margin-left: auto;
+}
+
+header h1 {
+   font-size: 2.2em;
+}
+
+body article h1 {
+   font-size: 1.75em;
+}
+
+article {
+   width: 94%;
+   float: none;
+   margin: 0px auto;
+}
+
+dl#ct_locations {
+   width: 57%;
+   margin: 0px 0px 0px 20px;
+}
+
+dl {
+   width: 90%;
+   margin: 0 auto;
+   text-align: left;
+}
+
+article img {
+   float: right;
+   width: 40%;
+   margin: 0% 2% 2% 2%;
+}
+
+nav ul li a {
+   margin-bottom: 0;
+}
+
+nav {
+   display: table;
+   width: 96%;
+   margin: 0 auto;
+   float: none;
+   background: linear-gradient(to right, rgba(73, 47, 146, 0.6), rgba(73, 47, 146, 0), rgba(73, 47, 146, 0.8));
+   /*box-shadow: rgba(73,47,146, 0.3) 0px 10px 15px, rgba(254, 195, 36, 0.4) 0px -10px 15px; /* Adjusted shadow 
+}
+
+nav ul {
+   display: table-row;
+   margin: 0;
+}
+
+nav ul li:last-of-type {
+   margin-right: 0%;
+}
+
+blockquote {
+   background: rgb(241, 241, 241);
+   border-left: 10px solid rgba(176,124,48,0.5);
+   quotes: "\201C""\201D""\201C""\2019";
+   border-radius: 20%;
+   width: 40%;
+   margin: 1%;
+   float: left;
+   padding: 2%;
+}
+
+blockquote p:first-of-type:before {
+   color: rgba(176,124,48,0.50);
+   content: open-quote;
+   font-size: 4em;
+   line-height: 0.1em;
+   margin: 0.2em 0.1em 0em 0.25em;
+   vertical-align: -0.4em;
+   float: left;
+}
+
+footer {
+   font-size: 0.9em;
+}
+
+
+/* =============================================
+	Desktop layout styles used by  devices
+	769px and larger.
+   =============================================
+*/
+/*
+@media only screen and (min-width: 769px) {
+
+html, body {
+   font-size: 20px;
+}
+
+html {
+   background-color: rgb(77,0,140);
+   margin: 0px auto;
+}
+
+body {
+   margin-left: 3%;
+   margin-right: 3%;        
+   margin: 0px auto auto auto;
+   clear: none;
+   float: none;    
+}
+}
+}
+*/
+/* =============================================
+	Mobile layout styles used by devices
+	480px and smaller in landscape mode.
+   =============================================
+*/
+/*
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+
+body {
+        width: 85%;        
+        background-color: white;
+    }
+
+html {
+   background-color: rgb(77,0,140);
+   margin: 0px auto;
+}
+.img {
+    max-width: 80%;
+}
+
+
+.teams {
+    display: flex; 
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.team {
+    width: 22%;
+    margin: 1%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.team img {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;   
+}
+
+.team .caption {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+header {
+    text-align: center;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header a img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+nav {
+    width: 100%;
+    margin: 0;
+    border-top: none;
+    border-bottom: 3px solid rgb(255, 202, 56);
+    border-top: 3px solid rgb(255, 202, 56);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(77,0,140);
+    background: linear-gradient(to right, rgba(255, 202, 56, 10), rgba(73, 47, 146, 0), rgba(73, 47, 146, 10));
+    box-shadow: rgba(121, 121, 121, 0.9) 0px 10px 15px, rgba(121, 121, 121, 0.9) 0px -10px 15px;
+}
+    
+nav ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+    font-size: 8px;
+}
+
+footer {
+    background-color: rgb(77,0,140);
+    background: linear-gradient(to right, rgba(255, 202, 56, 10), rgba(73, 47, 146, 30), rgba(73, 47, 146, 10));    
+
+.dropdown-menu {
+    width: 100%;
+}
+}
+}
+*/

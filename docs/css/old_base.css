@@ -33,6 +33,7 @@ html {
 
 html, button, input, select, textarea {
    font-family: serif;
+   color: #222;
 }
 
 body {
@@ -45,6 +46,14 @@ body {
 	Hypertext links
    =============================================
 */
+
+a {
+   color: #00e;
+}
+
+a:visited {
+   color: #551a8b;
+}
 
 a:hover {
    color: #06e;
@@ -161,6 +170,7 @@ nav ul, nav ol {
 img {
    border: 0;
    -ms-interpolation-mode: bicubic;
+   vertical-align: middle;
 }
 
 figure {

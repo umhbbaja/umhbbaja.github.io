@@ -1,0 +1,402 @@
+@charset "utf-8";
+
+:root {
+  --base-font-size: 14px;
+  --grid-gap: 20px;
+  --border-width: 4px;
+  --team-width: 22%;
+  --team-padding: 1%;
+  --team-margin: 0 auto;
+  --team-img-size: 175px;
+  --button-font-size: 20px;
+  --button-padding: 10px 20px;
+}
+
+html {
+    height: 100%;
+    font-size: clamp(12px, 2vw, 18px);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap);
+}
+
+.grid-item {
+    border: var(--border-width) solid rgb(77,0,140);
+  padding: 15px;
+  background-color: rgb(255, 202, 56);
+}
+
+.grid-item h3 {
+    text-align: center;
+}
+
+.teams {
+    display: flex;        
+    margin-left: 1px;
+    margin-right: 1px;
+    border-top: solid 2px rgb(77,0,140);
+    border-bottom: solid 2px rgb(77,0,140);    
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: clamp(5%, 150px, 15%);
+    padding-right: clamp(5%, 150px, 15%);
+    background: linear-gradient(to right, rgba(255, 202, 56, 10), rgba(73, 47, 146, 0), rgba(73, 47, 146, 10));
+}
+
+.team {
+    width: var(--team-width);
+    margin: var(--team-margin);
+    text-align: center;
+    position: relative;
+}
+
+.team img {
+    border-radius: 50%;    
+    width: var(--team-img-size);
+    height: var(--team-img-size);
+}
+
+.caption {
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+    text-align: center;
+    font-style: italic;
+}
+
+.donate-button {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;    
+    background-color: rgb(255, 202, 56);
+    color: rgb(77,0,140);
+    font-size: var(--button-font-size);
+    padding: var(--button-padding);
+    border: 2px rgb(77,0,140);
+    border-radius: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;    
+}
+
+.donate-button:hover {
+    background-color: rgb(77,0,140);
+    color: rgb(255, 202, 56);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border:none;
+    margin: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+    
+.dropdown-menu li {
+    padding: 5px;
+    margin: 0;
+    border: none;
+    display: block;
+    white-space: nowrap;
+    color: rgb(77, 0, 140);
+}
+
+.dropdown-menu li:hover {
+    background-color: #fff;
+    color: rgb(255, 202, 56);
+}
+
+.dropdown-menu .sponsorship-dropdown li:hover {
+    background-color: #fff;
+    color: rgb(77, 0, 140);            
+}
+
+.dropdown-menu .sponsorship-dropdown li {
+    color: rgb(77, 0, 140);
+}
+
+.form-container {
+    text-align: center;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="text"],
+.form-container textarea {
+    width: 40%;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+img, object, embed, video {
+    max-width: 100%;
+}
+
+body {
+    font-size: clamp(var(--base-font-size), 2vw, 18px);
+    margin-left: clamp(5%, 3%, 10%);
+    margin-right: clamp(5%, 3%, 10%);
+    width: 90%;
+    clear: none;
+    float: none;
+    min-height: 100%;
+    overflow-y: scroll;
+    background: rgb(77,0,140);
+}
+
+body::-webkit-scrollbar {
+    width: clamp(12px, 1vw, 18px);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(73, 47, 146,.3);
+}
+
+body::-webkit-scrollbar-track {
+    background-color: rgba(254, 195, 36, .5);
+}
+
+article {
+    width: clamp(70%, 80%, 100%);
+    margin: 0 auto;
+    float: left;
+    font-size: 0.8em;
+    text-align: justify;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header a{
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    max-width: 20%
+}
+
+header a img{
+    float: none;
+    max-width: clamp(70%, 80%, 100%);
+    margin-bottom: clamp(5px, 2%, 20px);
+    padding: 0;
+    display: block;     
+}
+
+header nav {
+    margin-top: 0px;
+}
+
+nav {
+    width: 100%;
+    margin: clamp(4%, 6%, 10%) 2% 0% 0%;   
+    border-top: 3px solid rgb(255, 202, 56);
+    border-bottom: 3px solid rgb(255, 202, 56);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 5px;
+
+}
+
+nav ul li .dropdown-menu a {
+    color: rgb(77, 0, 140);
+    
+}
+
+nav ul li,.dropdown-menu li {
+    padding: 5px;
+    margin: 5px;
+    border: none;
+
+}
+
+nav ul li .dropdown-menu li:hover {
+    background-color: #ffffff;
+    color: rgb(255, 202, 56);
+}
+
+nav ul li {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    font-size: clamp(0.7em, 1vw, 1em);
+    position: relative;
+    color: rgb(77, 0, 140);
+    text-align: center;
+    white-space: nowrap;
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5px;
+    justify-content:space-between;
+    
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8%;    
+}
+
+    
+
+nav ul li a:hover {    
+    color: rgb(255, 202, 56);
+}
+
+nav ul li a:focus {
+    outline: thin dotted;
+}
+
+nav ul li a:hover, nav ul li a:active {
+    outline: 0;
+}
+
+nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav ul li .dropdown-menu .sponsorship-dropdown li {
+    color: rgb(77, 0, 140);
+}
+
+nav ul li .dropdown-menu li {
+    padding: 5px;
+    margin: 0;
+    border: none;
+    display: block;
+    white-space: nowrap;
+}
+
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+body h1 {
+    margin: 1%;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    font-size: 1.5em;
+}
+
+body article h1 {
+    font-size: 1.15em;
+}
+
+cite {
+    color: rgb(110, 110, 255);
+}
+
+body p, body address {
+    margin: 3.5% 1%;
+    font-size: 1em;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    font-style: normal;
+    height: 100%;
+}
+
+dl {
+    margin-left: 2%;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+
+dt {
+    display: block;
+    margin: 0;
+    text-indent: 0;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(168, 168, 168,1.00);
+}
+
+dd {
+    display: block;
+    margin: 0 0 3% 3%;
+    text-indent: 0;
+}
+
+blockquote {
+    font-size: 1em;   
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    width: clamp(30%, 40%, 50%);
+    margin: clamp(0, 1%, 2%) 0 4% 0;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.6em;
+    margin-top: clamp(3%, 4%, 5%);
+    border-top: 3px solid rgba(128,98,26,1.00);
+    font-family: Segoe,"Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    clear: both;
+    padding-bottom: 20px;
+    background: linear-gradient(to right, rgba(255, 202, 56, 10), rgba(73, 47, 146, 0), rgba(73, 47, 146, 10));
+}
+
+blockquote p:last-of-type {
+    border-top: 1px solid rgba(128,98,26,1.00);
+    text-align: right;
+    font-size: 1em;
+}
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+q:before {
+    content: open-quote;
+}
+
+q:after {
+    content: close-quote;
+}
+
+article p, article address {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.social-links {
+    
+    transition: color 0.2s;
+    text-decoration: none;
+    font-size: clamp(20px, 3vw, 30px);
+    margin: 0 clamp(5px, 1%, 10px);
+    
+}
+
+.social-links:hover {
+    color: rgba(196, 45, 186, 0.133);
+} 

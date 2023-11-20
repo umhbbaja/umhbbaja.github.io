@@ -504,9 +504,6 @@ body {
    clear: none;
    float: none;
    background-color: white;
-   -moz-box-shadow: rgba(121, 121, 121, 0.9) 20px 0px 25px, rgba(121, 121, 121, 0.9) -20px 0px 25px; /*side glow left right*/
-   -webkit-box-shadow: rgba(121, 121, 121, 0.9) 20px 0px 25px, rgba(121, 121, 121, 0.9) -20px 0px 25px;
-   box-shadow: rgba(121, 121, 121, 0.9) 20px 0px 25px, rgba(121, 121, 121, 0.9) -20px 0px 25px; 
 }
 }
 }
@@ -608,6 +605,3 @@ nav ul li {
     width: 100%;
 }
 }
-
-    
-
